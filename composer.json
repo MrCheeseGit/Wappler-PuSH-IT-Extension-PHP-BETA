@@ -1,0 +1,20 @@
+{
+  "name": "mrcheese/wappler-push-it-php",
+  "description": "PuSH-IT PHP beta — Web Push (VAPID) for Wappler Server Connect PHP",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.4",
+    "minishlink/web-push": "^9.0"
+  },
+  "keywords": [
+    "wappler",
+    "server-connect",
+    "php",
+    "web-push",
+    "vapid",
+    "push-it",
+    "mrcheese"
+  ],
+  "homepage": "https://www.mrcheese.co.uk"
+}

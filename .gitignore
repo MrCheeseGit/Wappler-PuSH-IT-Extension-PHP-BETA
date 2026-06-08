@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+*.log
+vendor/
+composer.lock
+node_modules/
+
+.env
+.env.*
+!.env.example
+
+plan.md
+
+.cursor/
+.vscode/
