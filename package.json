@@ -1,6 +1,6 @@
 {
   "name": "wappler-push-it-php-beta",
-  "version": "0.1.0-beta",
+  "version": "0.1.1-beta",
   "description": "PuSH-IT BETA — Wappler Server Connect (PHP) extension for Web Push (VAPID)",
   "homepage": "https://www.mrcheese.co.uk",
   "keywords": [
@@ -19,6 +19,6 @@
   "wappler": {
     "module": "pushit",
     "serverModel": "php",
-    "version": "0.1.0-beta"
+    "version": "0.1.1-beta"
   }
 }

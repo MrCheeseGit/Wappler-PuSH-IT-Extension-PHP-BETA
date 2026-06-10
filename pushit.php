@@ -27,8 +27,8 @@ class pushit extends Module
                 ];
             }
 
-            $userUUID = trim((string) $this->parseOptional($options->userUUID ?? null, ''));
-            $entityId = trim((string) $this->parseOptional($options->entityId ?? null, ''));
+            $userUUID = $this->sanitizeContextField($this->parseOptional($options->userUUID ?? null, ''));
+            $entityId = $this->sanitizeContextField($this->parseOptional($options->entityId ?? null, ''));
             $eventTypes = trim((string) $this->parseOptional($options->eventTypes ?? null, ''));
             $userAgent = trim((string) $this->parseOptional($options->userAgent ?? null, ''));
 
@@ -269,6 +269,28 @@ class pushit extends Module
             return $_ENV[$name];
         }
         return null;
+    }
+
+    /**
+     * Reject App Connect-style binding paths accidentally POSTed as literals
+     * (e.g. adminProfile.data.getProfile.subUsrUUID). Real UUIDs and plain ids pass through.
+     */
+    private function sanitizeContextField($value)
+    {
+        $s = trim((string) $value);
+        if ($s === '') {
+            return '';
+        }
+
+        if (preg_match('/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i', $s)) {
+            return $s;
+        }
+
+        if (preg_match('/^[a-zA-Z_$][\w$]*(\.[a-zA-Z_$][\w$]*)+$/', $s)) {
+            return '';
+        }
+
+        return $s;
     }
 
     private function parseOptional($value, $default = null)

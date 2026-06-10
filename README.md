@@ -31,6 +31,8 @@ Same workflow as Node PuSH-IT:
 
 Browser setup (service worker, subscribe page, VAPID keys) is **identical** to the Node extension.
 
+**No App Connect component** ships with PHP PuSH-IT. Use [examples/pushit-subscribe-vanilla.js](examples/pushit-subscribe-vanilla.js) or your own JS. POST **resolved** `userUUID` / `entityId` values (from PHP session, hidden inputs, or a profile API) — not Wappler binding path strings like `adminProfile.data.getProfile.subUsrUUID`.
+
 ---
 
 ## Requirements
