@@ -1,12 +1,5 @@
 # PuSH-IT Extension — PHP BETA
 
-> ## ⚠️ NPM users — please read first (important)
->
-> Mr Cheese extensions were built for **Git copy install** first. Wappler's **npm** lane (Project Settings → Extensions) puts the package in `node_modules` but **does not automatically copy** Server Connect modules, App Connect JS/CSS, or other files into your project folders.
->
-> **This PHP BETA is not published on npm.** For Node projects use **[Wappler-PuSH-IT-Extension](https://github.com/MrCheeseGit/Wappler-PuSH-IT-Extension)** (`wappler-push-it` on npm) and follow its full npm install section. For this PHP build, use the [Git Extension Installer](https://www.mrcheese.co.uk/extensions/install) only.
->
-> Mr Cheese is working on a combined solution and has proposed **[`wappler-install.json`](https://github.com/MrCheeseGit/Wappler-Git-Extension-Manifest-Standard)** so install tools (and hopefully Wappler itself) can deploy extensions the same way from Git or npm. Until then, sorry for the extra steps — this is one reason these extensions were never intended to rely on npm alone.
 
 Web Push notifications for **Wappler Server Connect (PHP)** using **VAPID** — **no paid push API**, no Firebase project, no per-message fees. Browsers use Google/Mozilla push services for free; you only host your own keys and subscription rows.
 
@@ -67,6 +60,8 @@ Generate keys: `npx web-push generate-vapid-keys` (or any VAPID tool — keys wo
 ---
 
 ## Install
+
+Official Wappler guide: [How To Install Custom Wappler Extensions](https://docs.wappler.io/t/how-to-install-custom-wappler-extensions/49982/).
 
 ### 1. Composer dependency
 
